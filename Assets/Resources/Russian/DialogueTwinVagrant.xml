@@ -1,0 +1,32 @@
+<dialogue name="DialogueTwinVagrant">
+  <node id="0"   tipDialoga ="1">
+	<npc  npcText="БЛИЗНЕЦ БРОДЯГИ: - Осторожно а то каталкой задавиш" questValue ="0" />
+	<npc  npcText="БЛИЗНЕЦ БРОДЯГИ: - Опять ты безумец здесь нарисовался" questValue ="1" />
+	<npc  npcText="БЛИЗНЕЦ БРОДЯГИ: - Тебе моих денег мало так ты и брата грабанул" questValue ="3" />
+	<npc  npcText="БЛИЗНЕЦ БРОДЯГИ: - Мне не о чем с тобой говорить" questValue ="4" />
+    	<answer text="1. Жизнь или смерть, грязный бродяга!" toNode="1"  questValue ="0"  questName="TrampQuest"/>
+    	<answer text="1. Может у тебя  для меня есть еще что то?" toNode="3"  questValue ="1"  questName="TrampQuest"/>
+	<answer text="1. Мог и не отдавать" toNode="3"  questValue ="3" questStatus="4"  questName="TrampQuest"/>
+	<answer text="1. Я думаю мы друг другу пригодимся" toNode="3"  questValue ="4" questName="TrampQuest"/>
+	<answer text="2. Подскажи как выбраться" toNode="2"   questName="TrampQuest"/>
+	<answer text="3. Завершить диалог"  questValue ="0"  questName="TrampQuest" exit="True"  />
+	<answer text="2. Завершить диалог"  questValue ="1"   questName="TrampQuest" exit="True"  />
+  </node>
+  <node id="1"  tipDialoga ="1">
+    	<npc  npcText="БЛИЗНЕЦ БРОДЯГИ: - Вот возьми всё что у меня есть, только не трогай меня"  />
+      	<answer text="1. Забрать всё что у него есть" toNode="4" questStatus="1"  exit="True"/>
+	 <answer text="2. Завершить диалог!" exit="True" />
+  </node>
+  <node id="2"  tipDialoga ="1">
+    	<npc npcText="БЛИЗНЕЦ БРОДЯГИ: - Видел вывеску? Вот по ней зйди в таверну спроси у моего близнеца" />
+	<answer text="Завершить диалог" exit="True"  />
+  </node>
+  <node id="3"  tipDialoga ="1">
+    	<npc npcText="БЛИЗНЕЦ БРОДЯГИ: - Можешь меня убить, но я тебе больше ничего не отдам" />
+	<answer text="Убийство не входит в мои планы. Лучше помоги выбраться" toNode="2" />
+  </node>
+  <node id="4"  tipDialoga ="1">
+	<npc  npcText="БЛИЗНЕЦ БРОДЯГИ: - Жадный ты человек. Смотри не пожалей!" />
+    	<answer text="Завершить диалог"  exit="True" />
+  </node>	
+</dialogue> 

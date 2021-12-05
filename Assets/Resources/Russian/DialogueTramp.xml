@@ -1,0 +1,52 @@
+<dialogue name="Example">
+  <node id="0" tipDialoga ="2">
+    	<npc npcText="Диалог комнаты" />
+	<answer text="1. Поговорить с бродягой" toNode="1"  questValue ="0"  questName="TrampQuest"/>
+	<answer text="1. Поговорить с бродягой" toNode="4"  questValue="1" questName="TrampQuest"/>
+	<answer text="1. Поговорить с бродягой" toNode="9"  questValue="4" questName="TrampQuest"/>
+
+	<answer text="2. Осмотреть окрестности" toNode="2"  />
+	<answer text="3. Завершить игру"  questValue="0" questStatus="3"  questName="TrampQuest" />
+	<answer text="3. Завершить игру"  questValue="1" questStatus="3"  questName="TrampQuest" />
+  </node>
+  <node id="1"  tipDialoga ="2">
+ 	<npc npcText="Выберете что сказать бродяге:" />
+    	<answer text="1. Жизнь или смерть, грязный бродяга!" toNode="5" />
+	<answer text="2. Покажи мне выход от сюда!" toNode="8" />
+	<answer text="3. КАК ТЫ ПОХОЖ НА СВОЕГО БРАТА!" toNode="10"  questValue="5"   questName="TrampQuest" />
+  </node>
+  <node id="2"  tipDialoga ="3">
+    	<npc npcText="Вы находитесь в подвале заброшенной тюремной больницы с тремя комнатами и общим коридором. Одна из комнат переоборудована в таверну. Здесь обитают пациенты подвергшиеся иследованиям по применению эспериментального препарата. Случайно забравшийся сюда бродяга может вам помочь выбраться или убить Вас" />
+	<answer text="возврат в диалог комнаты" toNode="0"  />
+  </node>
+  <node id="3"  tipDialoga ="1">
+    	<npc npcText="БРОДЯГА: - Можешь меня убить, но я тебе больше ничего не отдам" />
+	<answer text="Мне этого не надо. Лучше помоги выбраться" toNode="8" />
+  </node>
+  <node id="4"  tipDialoga ="1">
+	<npc  npcText="БРОДЯГА: - У меня больше ничего нет" /> 
+	<answer text="Поищи в карманах может что найдеш" toNode="3" />
+  </node>
+  <node id="5"  tipDialoga ="1">
+    	<npc npcText="БРОДЯГА: - Вот возьми всё что у меня есть, только не трогай меня" />
+	<answer text="Действие 1. “Забрать всё что у него есть”" toNode="6" questStatus="1"  questName="TrampQuest" />
+	<answer text="Действие 2. “Оставить бродягу в покое”" toNode="7"  />
+  </node>
+  <node id="6" tipDialoga ="1">
+  	 <npc  npcText="БРОДЯГА: - Я теперь умру с голоду"  />
+	 <answer text="завершить диалог с бродягой" toNode="0" />
+  </node>
+  <node id="7"  tipDialoga ="3">
+	<npc npcText="Бродяга всадил Вам нож в спину как только Вы отвернулись" />	
+	<answer text="Конец игры." exit="True" questStatus="3"  questName="TrampQuest"  />
+  </node>
+  <node id="8" tipDialoga ="1">
+	<npc  npcText="БРОДЯГА: - У меня есть одна идея. Пошли со мной" />			
+	<answer text="Идем. Мне терять уже нечего" exit="True"  />
+  </node>
+<node id="9" tipDialoga ="1">
+	<npc  npcText="БРОДЯГА: - Зачем ты ограбил моего брата" />			
+	<answer text="Так вышло"  toNode="0"      />
+  </node>
+
+</dialogue>
